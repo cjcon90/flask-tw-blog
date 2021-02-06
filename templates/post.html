@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body class="flex flex-col justify-between min-h-screen ">
+    <header class="relative h-screen/2">
+        <div class="p-4 bg-gray-700 border-4 rounded-lg shadow-xl md:p-10 bg-opacity-90 absCenter border-shamrock-400">
+            <h1 class="block w-full max-w-screen-md px-4 text-4xl font-semibold leading-tight tracking-wide text-center text-gray-50">{{blog_post['title']}}</h1>
+        </div>
+        <img src="{{blog_post['image_url']}}" alt="Main image for blog post" class="object-cover w-full h-full">
+    </header>
+
+    
+        <div class="relative flex-1 w-full bg-gray-700 border-b-2">
+            <div class="flex flex-col items-center max-w-screen-lg mx-auto text-center border-shamrock-400 justify-evenly">
+                    <h2 class="px-6 pt-8 text-3xl text-shamrock-400">{{blog_post['subtitle']}}</h2>
+                    <p class="px-6 py-8 text-lg leading-9 text-justify text-gray-50">{{blog_post['body']}}</p>
+                    </div>
+        </div>
+
+{% include "footer.html" %}
+</body>
+</html>
